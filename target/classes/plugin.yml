@@ -1,0 +1,7 @@
+name: Glasschneider
+version: 1.0.0
+main: net.ianboy10.glasschneider.main.Main
+
+commands:
+  getGlasschneider:
+    description: Gibt einen Personalisierten Glasschneider.
