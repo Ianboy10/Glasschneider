@@ -26,7 +26,7 @@ public class BreakGlas implements Listener {
             return; // Überprüft, ob es ein rechtsklick auf einen block war
         if (e.getPlayer().getInventory().getItemInMainHand() != null && e.getPlayer().getInventory().getItemInMainHand().getType() == Material.AIR)
             return; // Überprüft, das Material des Items
-        if (e.getPlayer().getInventory().getItemInMainHand() != null && !e.getPlayer().getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("§5§lGlasschneider"))
+        if (e.getPlayer().getInventory().getItemInMainHand() != null && e.getPlayer().getInventory().getItemInMainHand().getItemMeta() == null && !e.getPlayer().getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals("§5§lGlasschneider"))
             return; // Überprüft den Namen
         if (!isGlassBlock(e.getClickedBlock().getType())) return; // Überprüft, ob es sich um einen Glasblock handelt
         if (Main.uuid.contains(e.getPlayer().getUniqueId()))
